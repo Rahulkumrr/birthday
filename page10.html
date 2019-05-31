@@ -1,0 +1,119 @@
+ <!DOCTYPE HTML>
+<html>
+	<head><title>Ladkiyan haath se nikal jyngi</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		.flipcard{
+			top: 50px;
+			left: 100px;
+			height: 450px;
+			width: 500px;
+			position: relative;
+			perspective: 100vw;
+			float:left;
+		}
+		@media (min-width: 600px) and (max-width: 992px){
+			.flipcard{
+				width: 50%;
+			}
+		}
+		@media (min-width: 992px){
+			.flipcard{
+				width: 37.5%;
+			}
+		}
+
+		.flipcard .front, .flipcard .back{
+			height: 450px;
+			width: 500px;
+			top: 0;
+			bottom: 0;
+			left: 0; 
+			right: 0;
+			background-size: cover;
+			position: absolute;
+			transition: .3s;
+			backface-visibility: hidden;
+			border: 2px solid #333;
+			box-shadow: 0 0 8px rgba(0,0,0,0.5);
+		}
+		.flipcard:hover .back{
+			transform: rotateY(360deg) scale(1);;
+		}
+		.flipcard .back{
+			transform: rotateY(180deg) scale(0.5);;
+			background: lawngreen;
+			color: #fff;
+			padding: 8px;
+			font-family: Arial,Helvetica,sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+		}
+		.flipcard:hover .front{
+			transform: rotateY(180deg) scale(0.5);
+		}
+			#back{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				height: 680px;
+				width: 1345px;
+				background-image: url(w19.jpg);
+			}
+			#wish{
+				background: #333;
+				opacity: 0.6;
+				word-spacing: 6px;
+				color: yellow;
+				text-align: center;
+				font-style: italic;
+				font-size: 30px;
+			}
+
+			.button {
+				opacity: 0.8;
+				padding: 15px 25px;
+  				margin: 8px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: black;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px grey;
+			}
+
+			.button:hover {background-color: black}
+
+			.button:active {
+ 				background-color: black;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+
+		</style>
+	</head>
+	<body bgcolor="black">
+		<div id="back">
+			<marquee hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+			
+			<marquee id="wish" width="350" height="76%" direction="up" hspace="150px" vspace="15px" scrollamount="5">
+				“Today is the birthday of a girl who is spreading joy and positivity all around. May your birthday and your life be as wonderful as you are!" <br><br>Happy birthday.
+			</marquee>
+
+			<div class="flipcard">
+				<div class="front" style="background-image: url(n3.jpg);"></div>
+				<div class="back"><center>I wish,<br>ladki HAATH se<br> nikal jaye!</center></div>
+			</div>
+
+			<a href="page9.html"><button class="button"> < </button></a>
+			<a href="page11.html"><button class="button"> > </button></a>
+			
+		</div>
+	</body>
+</html>

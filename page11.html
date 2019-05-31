@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Awsome</title>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		.rotating-box{
+			width: 380px;
+			height: 380px;
+			margin: 8px auto;
+			perspective: 800px;
+		}
+		.single-rb{
+			width: 380px;
+			animation: rotate 25s linear infinite;
+			transform-style: preserve-3d;
+			margin-top: 120px;
+		}
+		.single-rb img{
+			height: 400px;
+			width: 400px;
+		}
+		.single-rb div{
+			position: absolute;
+			width: 400px;
+			height: 400px;
+		}
+		.front-side{
+			transform: translateZ(200px);
+		}
+		.back-side{
+			transform: rotateY(180deg) translateZ(200px);
+		}
+		.left-side{
+			transform: rotateY(-90deg) translateX(-200px);
+			transform-origin: left;			
+		}
+		.right-side{
+			transform: rotateY(90deg) translateX(200px);
+			transform-origin: right;			
+		}
+		.top-side{
+			transform: rotateX(-90deg) translateY(-200px);
+			transform-origin: top;			
+		}
+		.bottom-side{
+			transform: rotateX(90deg) translateY(200px);
+			transform-origin: bottom;			
+		}
+		@keyframes rotate{
+			0%{transform: rotateY(0);}
+			100%{transform: rotateY(360deg);}
+		}
+
+			#back{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				height: 680px;
+				width: 1345px;
+				background-image: url(wa10.jpg);
+			}
+			
+			}
+			#wish{
+				color: yellow;
+				font-style: italic;
+				font-size: 30px;
+			}
+
+			.button {
+				float: right;
+				opacity: 0.8;
+				padding: 15px 25px;
+  				margin: 8px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: black;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px grey;
+			}
+
+			.button:hover {background-color: black}
+
+			.button:active {
+ 				background-color: black;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+
+		</style>
+	</head>
+	<body bgcolor="black">
+		<div id="back">
+			<marquee hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+			
+			<div class="rotating-box">
+				<div class="single-rb">
+					<div class="front-side">
+						<img src="hbi.jpg" alt="img">
+					</div>
+					<div class="back-side">
+						<img src="gold.jpg" alt="img">
+					</div>
+					<div class="left-side">
+						<img src="nsa.jpg" alt="img">
+					</div>
+					<div class="right-side">
+						<img src="nsa.jpg" alt="img">
+					</div>
+					<div class="top-side"></div>
+					<div class="bottom-side"></div>
+				</div>
+			</div>
+
+			<a href="last.html"><button class="button"> > </button></a>
+			<a href="page10.html"><button class="button"> < </button></a>		
+		</div>
+	</body>
+</html>

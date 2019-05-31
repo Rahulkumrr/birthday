@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Look for Nisha</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+		*{box-sizing: border-box;}
+		.img-zoom-container {
+			position: relative;
+		}
+		img{
+			border: 2px solid yellow;
+		}
+		.img-zoom-lens {
+			position: absolute;
+			width: 50px;
+			height: 30px;
+		}
+		.img-zoom-result {
+			
+			border: 5px solid black;
+			border-radius: 0 50px 0 40px;
+			width: 600px;
+			height: 400px;
+		}
+			#back{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				height: 680px;
+				width: 1345px;
+				background-image: url(w5.jpg);
+			}
+			#wish{
+				font-size: 40px;
+				font-style: italic;
+			}
+
+			.button {
+				float: right;
+				margin: 8px;
+				opacity: 0.7;
+				padding: 15px 25px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: #4CAF50;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px #999;
+			}
+
+			.button:hover {background-color: #3e8e41}
+
+			.button:active {
+ 				background-color: #3e8e41;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+
+	</style>
+		<script>
+			
+			function imageZoom(imgID, resultID) {
+				var img, lens, result, cx, cy;
+				img = document.getElementById(imgID);
+				result = document.getElementById(resultID);/*create lens:*/
+				lens = document.createElement("DIV");
+				lens.setAttribute("class", "img-zoom-lens");/*insert lens:*/
+				img.parentElement.insertBefore(lens, img);/*calculate the ratio between result DIV and lens:*/
+				cx = result.offsetWidth / lens.offsetWidth;
+				cy = result.offsetHeight / lens.offsetHeight;/*set background properties for the result DIV:*/
+				result.style.backgroundImage = "url('" + img.src + "')";
+				result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+		/*execute a function when someone moves the cursor over the image, or the lens:*/
+				lens.addEventListener("mousemove", moveLens);
+				img.addEventListener("mousemove", moveLens);/*and also for touch screens:*/
+				lens.addEventListener("touchmove", moveLens);
+				img.addEventListener("touchmove", moveLens);
+				function moveLens(e) {
+					var pos, x, y;/*prevent any other actions that may occur when moving over the image:*/
+    				e.preventDefault();/*get the cursor's x and y positions:*/
+    				pos = getCursorPos(e);/*calculate the position of the lens:*/
+    				x = pos.x - (lens.offsetWidth / 2);
+    				y = pos.y - (lens.offsetHeight / 2);
+    			/*prevent the lens from being positioned outside the image:*/
+    				if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    				if (x < 0) {x = 0;}
+    				if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    				if (y < 0) {y = 0;}
+    			/*set the position of the lens:*/
+    				lens.style.left = x + "px";
+    				lens.style.top = y + "px";
+    			/*display what the lens "sees":*/
+    				result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+    			}
+    			function getCursorPos(e) {
+    				var a, x = 0, y = 0;
+    				e = e || window.event;
+    			/*get the x and y positions of the image:*/
+    				a = img.getBoundingClientRect();
+    			/*calculate the cursor's x and y coordinates, relative to the image:*/
+    				x = e.pageX - a.left;
+    				y = e.pageY - a.top;
+    			/*consider any page scrolling:*/
+    				x = x - window.pageXOffset;
+    				y = y - window.pageYOffset;
+    				return {x : x, y : y};
+  				}
+			}
+
+		</script>
+	</head>
+	<body bgcolor="blue">
+		<div id="back">
+			<marquee hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+	
+
+			<div class="img-zoom-container">
+  				<img id="myimage" src="n6.jpg" width="200" height="100">
+  				<a href="page5.html"><button class="button"> > </button></a>
+  				<a href="page3.html"><button class="button"> < </button></a>
+				<center><div id="myresult" class="img-zoom-result"></div></center>
+  			</div>
+			
+			<script>// Initiate zoom effect:
+				imageZoom("myimage", "myresult");
+			</script>
+			
+
+			<marquee id="wish" width="100%" height="75px" direction="up" hspace="0" vspace="3px" scrollamount="1">
+			<center>“It’s always a treat to wish happy birthday to someone so sweet.”</center> 
+			</marquee>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+		.toi{ 
+		position: relative;
+		width: 400px;
+		height: 500px;
+		float: left;
+		margin: 0 0px 0 300px;
+		background-size: 33%;
+		background-position: center;
+		transition: 1s;
+	}
+	.toi:hover{
+		background-size: 110%;
+	}
+	.toi:after{
+		position: absolute;
+		top: 87%; 
+		bottom: 0;
+		left: 0;
+		right: 0;
+		white-space: pre-wrap;
+		overflow: hidden;
+		background-color: rgba(0,0,0,0.3);
+		color: #fff;
+		padding:8px;
+		content: attr(data-text);
+		transition: 0.5s;
+	}
+	.toi:hover:after{
+		top:0;
+		padding: 8px;
+		background-color: rgba(0,0,0,0.6);
+	}
+	.toi:first-line{
+		color:#fff;
+		font-weight: bold;
+		font-size:  1.5em;
+	}
+			#back{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				overflow: hiddens;
+				height: 680px;
+				width: 1345px;
+				background-image: url(walli.jpg);
+			}
+			#wish{
+				color: yellow;
+				font-style: italic;
+				font-size: 30px;
+			}
+
+			.button {
+				opacity: 0.7;
+				padding: 15px 25px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: #4CAF50;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px #999;
+			}
+
+			.button:hover {background-color: #3e8e41}
+
+			.button:active {
+ 				background-color: #3e8e41;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+			
+		</style>
+	</head>
+	<body bgcolor="black">
+		<div id="back">
+			<marquee hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+
+		<div class="toi" style="border-radius: 15px; background-image: url(n1.jpg);" data-text="Be Strong
+“Birthdays are a new start, a fresh beginning and a time to pursue new endeavors with new goals. Move forward with confidence and courage. You are a very special person. May today and all of your days be amazing!""></div>
+
+			<marquee id="wish" width="450" height="73%" direction="up" hspace="90px" vspace="10px" scrollamount="6">
+				“May you be gifted with life’s biggest joys and never-ending bliss. <br><br>After all, you yourself are a gift to earth, so you deserve the best. Happy birthday.”
+			</marquee>
+			<center><a href="page1.html"><button class="button">< </button></a>
+			<a href="page3.html"><button class="button"> > </button></a> </center>
+		</div>		
+	</body>
+</html>

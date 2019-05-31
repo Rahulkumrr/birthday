@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>Cursor over the image</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			div{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				height: 680px;
+				width: 1345px;
+				background-image: url(rrr.jpg);
+			}
+			.pic{
+				height: 70px;
+				width: 70px;
+				padding: center;
+				
+
+			}
+			.picbig{
+				position: absolute;
+				
+				width: 0px;
+				-webkit-transition: width 0.3s linear 0s;
+				transition: width 0.3s linear 0s; 
+				z-index: 10;
+			}
+			.pic:hover + .picbig{
+				width: 560px;
+			}
+
+			#wish{
+				font-style: italic;
+			}
+
+			.button {
+				opacity: 0.8;
+				padding: 15px 25px;
+  				margin: 8px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: black;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px grey;
+			}
+
+			.button:hover {background-color: black}
+
+			.button:active {
+ 				background-color: black;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+
+		</style>
+	</head>
+	<body bgcolor="purple">
+		<div>
+			<marquee hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+			<marquee id="wish" width="500" height="80%" direction="up" hspace="10px" behavior="alternate" scrollamount="15">
+				<center>My dear friend,<br>may ur special day be full of beautiful, magical & unforgettable moments!<br><br>Happy B'Day!</center>
+			</marquee>
+
+			<img class="pic" src="n2.png" alt="img1">
+			<img class="picbig" src="n2.png" alt="img1">
+			
+			<a href="page8.html"><button class="button"> < </button></a>
+			<a href="page10.html"><button class="button"> > </button></a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>BOOM</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.container{
+				position: relative;
+				width: 50%;
+				padding-left: 250px;
+			}
+
+			.image{
+				display: block;
+				width: 650px;
+				height: 500px;
+				border: 5px solid red;
+			}
+
+			.overlay{
+				position: absolute;
+				bottom: 6px;
+				left: 256px;
+				right: 0;
+				background-color: coral;
+				overflow: hidden;
+				width: 648px;
+				height: 497px;
+				-webkit-transform: scale(0);
+				-ms-transform: scale(0);
+				transform: scale(0);
+				-webkit-transition: .3s ease;
+				transition: .3s ease;
+			}
+			.container:hover .overlay {
+				-webkit-transform: scale(1);
+  				-ms-transform: scale(1);
+  				transform: scale(1);
+			}
+
+			.text{
+				color: white;
+				font-weight: bold;
+				font-size: 45px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+				text-align: center;
+			}
+
+			#back{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				height: 680px;
+				width: 1345px;
+				background-image: url(wall.jpg);
+			}
+
+			#wish{
+				color: grey;
+			}
+
+			.button {
+				opacity: 0.8;
+				padding: 15px 25px;
+  				margin: 8px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: black;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px grey;
+			}
+
+			.button:hover {background-color: black}
+
+			.button:active {
+ 				background-color: black;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+
+		</style>
+	</head>
+	<body bgcolor="olivedrab">
+		<div id="back">
+			<marquee id="wish" hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+			
+			
+			<div class="container">
+  				<img src="n9.jpg" alt="Avatar" class="image">
+  				<div class="overlay">
+    				<div class="text">खुदा करे, सलामत रहे दोनों हमेशा,<br>
+एक तुम और दूसरा मुस्कुराना तुम्हारा.....<br>happy birthday🎉🎉</div>
+  				</div>
+			</div>
+
+			<center><a href="page4.html"><button class="button"> < </button></a>
+			<a href="page6.html"><button class="button"> > </button></a></center>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: url(imgg.jpg);
+			background-size: cover;
+		}
+		.title{
+			text-align: center;
+			padding: 50px 0 20px;
+		}
+		.title h1{
+			margin: 0;
+			padding: 0;
+			color: white;
+			font-size: 36px;
+		}
+		.container{
+			width: 50%;
+			height: 400px;
+			background: #fff;
+			margin: 0 auto;
+			border: 2px solid #fff;
+			box-shadow: 0 20px 45px rgba(0,0,0,3)
+		}
+		.container .left{
+			float: left;
+			width: 50%;
+			height: 400px;
+			background: url(cake.jpg);
+			background-size: cover;
+			box-sizing: border-box;
+		}
+		.container .right{
+			float: right;
+			width: 50%;
+			height: 400px;
+			box-sizing: border-box;
+		}
+		.formbox{
+			width: 100%;
+			padding: 80px 40px;
+			box-sizing: border-box;
+			height: 400px;
+			background: #fff;
+		}
+		.formbox p{
+			margin: 0;
+			padding: 0;
+			font-weight: bold;
+			color: #a6af13;
+		}
+		.formbox input{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.button{
+			border: none;
+			outline: none;
+			height: 50px;
+			width: 250px;
+			color: white;
+			background: skyblue;
+			cursor: pointer;
+		}
+		.button:hover{
+			background: #a6af13;
+		}
+		.formbox input[type="text"],
+		.formbox input[type="password"]
+		{
+			border:none;
+			border-bottom: 2px solid #a6af13;
+			outline: none;
+			height: 40px;
+		}
+		.formbox input[type="text"]:focus,
+		.formbox input[type="password"]:focus
+		{
+			border-bottom: 2px solid #262626;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="title"><h1>Welcome! Birthday Girl</div><br>
+		<div class="container" align="center">
+ 	   		
+ 	   		<div class="left"></div>
+ 	   		<div class="right">
+ 	   			<div class="formbox">
+ 	   				<form>
+ 	   					<p>Name</p>
+ 	   					<input id="tex" type="text" placeholder="username" required>
+ 	   					<p>Password</p>
+ 	   					<input id="numb" type="password" placeholder="********" required>
+ 	   				</form>
+ 	   				<button class="button" type="button" onclick="myFunction();myFunction2();"><b>Login</b></button> <p id="demo"></p>
+ 	   	<script>
+ 	   		function myFunction2(){
+ 	   			var y;
+ 	   			y=document.getElementById("tex").value;
+ 	   			if(y!=="BdayGirlNisha" || y==""){
+ 	   				text="Invalid username, Please! try again";
+ 	   			}
+ 	   			document.getElementById("demo").innerHTML = text;
+ 	   		}
+
+ 	   		function myFunction(){
+ 	   			var x;
+ 	   			x=document.getElementById("numb").value;
+ 	   			if(x=="qtP!3"){
+ 	   				document.location.href="page1.html";
+ 	   			}
+ 	   			else{
+ 	   				text="Please enter correct password.";
+ 	   			}
+ 	   			document.getElementById("demo").innerHTML = text;
+ 	   		}
+ 	   	</script>
+ 	   				<h3 style="color:yellowgreen;font-size: 20px"> 🎊Many Many Happy Returns of the Day 🎉</h3>
+ 	   			</div>
+ 	   		</div>
+			
+		</div>
+	</body>
+</html>

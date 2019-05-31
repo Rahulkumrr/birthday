@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>Shivering image</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+
+		img:hover {
+  			animation: shake 0.5s;
+ 			 animation-iteration-count: infinite;
+		}
+
+		@keyframes shake {
+  			0% { transform: translate(1px, 1px) rotate(0deg); }
+  			10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  			20% { transform: translate(-3px, 0px) rotate(1deg); }
+  			30% { transform: translate(3px, 2px) rotate(0deg); }
+  			40% { transform: translate(1px, -1px) rotate(1deg); }
+  			50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  			60% { transform: translate(-3px, 1px) rotate(0deg); }
+  			70% { transform: translate(3px, 1px) rotate(-1deg); }
+  			80% { transform: translate(-1px, -1px) rotate(1deg); }
+  			90% { transform: translate(1px, 2px) rotate(0deg); }
+  			100% { transform: translate(1px, -2px) rotate(-1deg); }
+		}
+			#back{
+				border-radius: 55px 5px;
+				font-size: 35px;
+				color: white;
+				height: 680px;
+				width: 1345px;
+				background-image: url(shake.jpg);
+			}
+			img{
+				border: 3px solid magenta;
+				height: 500px;
+				width: 480px;
+				border-radius: 40px;
+
+			}
+			#wish{
+				color: yellow;
+				font-family: arial;
+				font-style: italic;
+				font-size: 30px;
+			}
+
+			.button {
+				opacity: 0.8;
+				padding: 15px 25px;
+  				margin: 8px;
+  				font-size: 20px;
+  				text-align: center;
+  				cursor: pointer;
+  				outline: none;
+  				color: #fff;
+  				background-color: black;
+  				border: none;
+  				border-radius: 15px;
+  				box-shadow: 0 9px grey;
+			}
+
+			.button:hover {background-color: black}
+
+			.button:active {
+ 				background-color: black;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+
+		</style>
+	</head>
+	<body bgcolor="grey">
+		<div id="back">
+			<marquee hspace="45px" vspace="15px" scrollamount="11" behavior="alternate">
+				🎂🎂🎂 Happy 🎈 Birthday 🎈 Dear! 🎂🎂🎂
+			</marquee>
+			<marquee id="wish" onmouseover="stop()" onmouseout="start()" width="300" height="80%" direction="up" hspace="10px" scrollamount="4">
+				“On your birthday, I thought of giving you the cutest gift in the world. <br><br>But then I realized that is not possible, <br>because you yourself are the cutest gift in the world."<br><br>
+<b>Happy B’Day Cuttie</b>
+			</marquee>
+			<img src="n7.jpg" alt="img1">
+			<a href="page7.html"><button class="button"> < </button></a>
+			<a href="page9.html"><button class="button"> > </button></a>
+			
+			
+		</div>
+	</body>
+</html>
